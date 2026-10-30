@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Storefront</title>
+    <style>
+        /* Base Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        :root {
+            --primary-dark: #111111;
+            --accent-color: #222222;
+            --text-main: #333333;
+            --bg-light: #f9f9f9;
+            --card-bg: #ffffff;
+            --border-color: #e5e5e5;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #b3b3b3;
+            margin-bottom: 30px;
+        }
+
+        /* Main Store Layout */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        /* Responsive Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Product Cards */
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .product-image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888888;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .product-info {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .product-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        /* Action Buttons */
+        .buy-button {
+            display: inline-block;
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #333333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: #888888;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 60px;
+            border-top: 1px solid #222222;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Storefront</div>
+        </div>
+    </header>
+
+    <!-- Hero Header -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Curated Quality Delivered Directly</h1>
+            <p>Experience clean aesthetics, premium selections, and reliable delivery on every order.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main>
+        <h2 class="section-title">Featured Packages</h2>
+        
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">Product Image Placeholder</div>
+                <div class="product-info">
+                    <div class="product-name">The Essential Package</div>
+                    <p class="product-description">A curated selection of our foundational high-quality items, perfectly portioned for individual or family meals.</p>
+                    <div class="product-meta">
+                        <div class="product-price">$149.00</div>
+                        <a href="#" class="buy-button">Select Box</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">Product Image Placeholder</div>
+                <div class="product-info">
+                    <div class="product-name">The Custom Crate</div>
+                    <p class="product-description">Maximize your flexibility with an expanded assortment tailored to specific preferences and high-volume demand.</p>
+                    <div class="product-meta">
+                        <div class="product-price">$269.00</div>
+                        <a href="#" class="buy-button">Select Box</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Storefront. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
