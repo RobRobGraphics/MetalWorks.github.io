@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Showcase Storefront</title>
+    <title>Metal Works Trading Card Co.</title>
     <style>
         /* Modern Reset & Clean Typography */
         * {
@@ -55,13 +55,20 @@
             text-transform: uppercase;
         }
 
-        /* High-Impact Hero Segment */
+        /* High-Impact Hero Segment with Uploaded Background Image */
         .hero-section {
+            position: relative;
             max-width: 1100px;
-            margin: 0 auto;
-            padding: 120px 20px 80px 20px;
+            margin: 40px auto 0 auto;
+            padding: 140px 20px;
             text-align: center;
-            border-bottom: 1px solid var(--border-subtle);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            background-image: linear-gradient(rgba(13, 13, 13, 0.75), rgba(13, 13, 13, 0.75)), url('test.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow: hidden;
         }
 
         .hero-badge {
@@ -71,10 +78,11 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             padding: 6px 16px;
-            border: 1px solid var(--border-subtle);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 0, 0, 0.4);
             border-radius: 20px;
             margin-bottom: 24px;
-            color: var(--text-muted);
+            color: var(--text-pure);
         }
 
         .hero-section h1 {
@@ -86,13 +94,15 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
 
         .hero-section p {
             font-size: 18px;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.8);
             max-width: 580px;
             margin: 0 auto;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
         }
 
         /* Grid Display Layout */
@@ -213,14 +223,14 @@
     <!-- Minimal Header -->
     <header>
         <div class="nav-container">
-            <div class="brand-logo">Showcase</div>
+            <div class="brand-logo">Company Name</div>
         </div>
     </header>
 
-    <!-- Impact Hero Header Section -->
+    <!-- Impact Hero Header Section with test.png Background -->
     <section class="hero-section">
         <div class="hero-badge">Now Available</div>
-        <h1>Curated Selections. Handcrafted Presentation.</h1>
+        <h1>Main Storefront Headline Text</h1>
         <p>A minimalist showcase built for speed, clean display mechanics, and reliable processing layout.</p>
     </section>
 
@@ -228,11 +238,11 @@
     <main class="catalog-container">
         <div class="grid-layout">
             
-            <!-- Item Card 1 -->
+            <!-- Item Box 1 -->
             <div class="product-container-card">
-                <div class="visual-display-area">Display Image</div>
+                <div class="visual-display-area">Display Image 1</div>
                 <div class="content-area">
-                    <div class="item-heading">The Foundation Box</div>
+                    <div class="item-heading">The First Package</div>
                     <p class="item-summary">A structured premium configuration displaying our foundational items. Optimized for complete setups or individual packages.</p>
                     <div class="action-row">
                         <div class="price-label">$149</div>
@@ -241,11 +251,11 @@
                 </div>
             </div>
 
-            <!-- Item Card 2 -->
+            <!-- Item Box 2 -->
             <div class="product-container-card">
-                <div class="visual-display-area">Display Image</div>
+                <div class="visual-display-area">Display Image 2</div>
                 <div class="content-area">
-                    <div class="item-heading">The Custom Configuration</div>
+                    <div class="item-heading">The Second Package</div>
                     <p class="item-summary">An expanded custom variant allowing tailored specifications, heavier material options, and high-volume deployment formats.</p>
                     <div class="action-row">
                         <div class="price-label">$269</div>
@@ -259,7 +269,7 @@
 
     <!-- Footer Segment -->
     <footer>
-        <p>&copy; 2026 Showcase Layouts. All rights reserved.</p>
+        <p>&copy; 2026 Company Name. All rights reserved.</p>
     </footer>
 
 </body>
