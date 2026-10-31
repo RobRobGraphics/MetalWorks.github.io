@@ -1,3 +1,4 @@
+
 import React, { useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Search, ShoppingBag, Menu, X, ChevronDown, ArrowUpRight, Plus, Minus, Trash2, Sparkles } from 'lucide-react'
