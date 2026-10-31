@@ -60,12 +60,12 @@
             text-transform: uppercase;
         }
 
-        /* Hero Segment Customizations */
+        /* Hero Segment Centering and Spill Prevention Customizations */
         .hero-section {
             position: relative;
             max-width: 1100px;
             margin: 40px auto 0 auto;
-            padding: 180px 20px; /* Symmetrical internal layout bounds */
+            padding: 180px 20px;
             text-align: center;
             border: 1px solid var(--border-subtle);
             border-radius: 8px;
@@ -77,8 +77,8 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: center; /* Centers items horizontally */
+            justify-content: center; /* Centers items vertically */
         }
 
         .hero-badge {
@@ -96,30 +96,33 @@
             color: var(--text-pure);
         }
 
-        /* Strict Single-Line Impact Treatment */
+        /* Centered Fluid Header Scaling Rule */
         .hero-section h1 {
             font-family: "Impact", "Arial Black", sans-serif;
-            font-size: 62px;
+            font-size: clamp(32px, 4.2vw, 62px); /* Scales cleanly down on smaller screens */
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            line-height: 1;
+            line-height: 1.1;
             margin-bottom: 20px;
-            white-space: nowrap; /* Forces layout text onto one single line */
+            white-space: nowrap; /* Strictly forces text onto one single line */
             width: 100%;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            text-align: center;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.7);
         }
 
-        /* High-Visibility Bebas Neue Layout Modification */
+        /* Centered Single-Line Bebas Neue Subtext */
         .hero-section p {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 34px; /* Scaled up heavily but remains smaller than headline text */
+            font-size: clamp(18px, 2.5vw, 34px); /* Scales cleanly down while staying smaller than h1 */
             font-weight: 400;
             color: rgba(255, 255, 255, 0.9);
             letter-spacing: 1.5px;
             line-height: 1.2;
-            max-width: 900px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            white-space: nowrap; /* Forces layout text onto one single line */
+            width: 100%;
+            text-align: center;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.6);
         }
 
         /* Grid Display Layout */
@@ -246,7 +249,7 @@
         </div>
     </header>
 
-    <!-- Custom Headline & Subtext Sections with Typography Fixes -->
+    <!-- Custom Headline & Subtext Sections with Center Alignment Layout Fixes -->
     <section class="hero-section">
         <div class="hero-badge">Now Available</div>
         <h1>Rooted in history. Forged for the Future.</h1>
@@ -288,8 +291,3 @@
 
     <!-- Footer Segment with Company Name -->
     <footer>
-        <p>&copy; 2026 Metal Works Trading Card Co. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
